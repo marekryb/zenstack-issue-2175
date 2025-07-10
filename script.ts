@@ -1,7 +1,15 @@
 import { PrismaClient } from '@prisma/client';
 import { enhance } from '@zenstackhq/runtime';
 
-const prisma = new PrismaClient().$extends({});
+const prisma = new PrismaClient().$extends({
+    model: {
+        user: {
+            async signUp(email: string) {
+                return prisma.user.create({ data: { email } });
+            },
+        },
+    },
+});
 
 const db = enhance(prisma);
 
@@ -19,6 +27,9 @@ async function main() {
         },
     });
     console.log(post.title);
+
+    const newUser = await db.user.signUp('a@b.com');
+    console.log(newUser.email);
 }
 
 main();

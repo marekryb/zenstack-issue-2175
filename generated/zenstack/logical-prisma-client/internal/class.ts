@@ -36,7 +36,7 @@ const config: runtime.GetPrismaClientConfig = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "/Users/yiming/git/repro/new-generator-ext/logical-1752131788228.prisma",
+    "sourceFilePath": "/Users/yiming/git/repro/new-generator-ext/logical-1752132057699.prisma",
     "isCustomOutput": true
   },
   "relativePath": "../../..",

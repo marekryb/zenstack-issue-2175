@@ -3,7 +3,7 @@
     "license": "MIT",
     "scripts": {
         "generate": "zenstack generate --output ./generated/zenstack",
-        "build": "npm run generate && tsc",
+        "build": "npm run generate && npx tsc",
         "dev": "ts-node ./script.ts"
     },
     "dependencies": {
